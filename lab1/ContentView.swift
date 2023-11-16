@@ -48,8 +48,12 @@ struct ContentView: View {
             .frame(width: 327, alignment: .top)
             .background(Color(red: 0.28,  green: 0.58, blue: 1))
             .cornerRadius(12)
+            SearchBar()
+                .padding([.trailing, .leading], 16)
+                .padding(.top, 20)
+            Spacer()
+            
         }
-        
         
     }
 }
