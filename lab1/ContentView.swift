@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Hello,")
                         .font(Font.custom("Poppins", size: 16))
                         .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
@@ -27,16 +27,19 @@ struct ContentView: View {
                 Image("Frame").clipShape(Circle())
                 
             }
-            .padding(.leading, 24)
-            .padding(.leading, 24)
+            .padding([.leading, .trailing], 24)
+            .padding(.bottom, 32)
+            .padding(.top, 20)
+            
             DoctorInfo(imageName: "Doc", doctorName: "Dr. Imran Syahir", doctorSpecialisation: "General Doctor")
+                .padding([.leading, .trailing], 24)
             
             SearchBar()
                 .padding([.trailing, .leading], 16)
                 .padding(.top, 20)
             Spacer()
             
-        }
+        }.padding([.trailing, .leading], 24)
         
     }
 }
