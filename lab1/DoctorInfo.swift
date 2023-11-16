@@ -9,23 +9,44 @@ import Foundation
 import SwiftUI
 
 struct DoctorInfo: View {
+    var imageName: String
+    var doctorName: String
+    var doctorSpecialisation: String
     var body : some View {
         VStack() {
             HStack {
-                DoctorPhoto(imageName: 	"Doc")
-                Spacer()
-                VStack(alignment: .center, spacing: 16) {
-                    Text("Dr. Imran Syahir")
-                        .font(Font.custom("Poppins", size: 14).weight(.bold))
+                DoctorPhoto(imageName: 	imageName)
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text(doctorName)
+                        .font(Font.custom("Poppins", size: 16).weight(.bold))
                         .foregroundColor(.white)
-                    Text("General Doctor")
+                    Text(doctorSpecialisation	)
                         .font(Font.custom("Poppins", size: 14))
                         .foregroundColor(Color(red: 0.8, green: 0.88, blue: 1))
                 }
+                
                 Spacer()
+                
                 Image("arrow-right").frame(width: 24, height: 24)
             }
+            .padding(.bottom, 16)
             
+            Divider().overlay(Color.white.opacity(0.8))
+            
+            HStack {
+                Image("calendar-2").padding(.trailing, 8)
+                Text("Sunday, 12 June")
+                    .font(Font.custom("Poppins", size: 12))
+                    .foregroundColor(.white)
+                    .padding(.trailing, 17)//30
+                
+                Image("clock").padding(.trailing, 8)
+                Text("11:00 - 12:00 AM")
+                    .font(Font.custom("Poppins", size: 12))
+                    .foregroundColor(.white)
+            }
+            .padding(.top, 16)
         }
         .padding(20)
         .frame(width: 327, alignment: .top)
@@ -36,6 +57,6 @@ struct DoctorInfo: View {
 
 struct DoctorInfo_Previews: PreviewProvider {
     static var previews: some View {
-        DoctorInfo()
+        DoctorInfo(imageName: "Doc", doctorName: "Dr. Imran Syahir", doctorSpecialisation: "General Doctor")
     }
 }
