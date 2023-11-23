@@ -9,53 +9,66 @@ import Foundation
 import SwiftUI
 
 struct DoctorInfo: View {
-    @Binding var doctor: DoctorModel
+    @Binding var doctorInfo: DoctorInfoModel
+    var commonPAdding: CGFloat = 20
+    var deviderPadding: CGFloat = 16
+    var mainCornerRadius: CGFloat = 12
+    var personalInfoPadding: CGFloat = 12
+    var stackSpacing: CGFloat = 16
+    var imagePadding: CGFloat = 8
+    
     var body : some View {
         VStack() {
-            HStack {
-                DoctorPhotoView(image: doctor.image)
+            HStack(spacing: 0) {
+                DoctorPhotoView(image: doctorInfo.doctor.image)
                 
-                VStack(alignment: .leading, spacing: 16) {
-                    Text(doctor.name)
-                        .font(Font.custom("Poppins", size: 16).weight(.bold))
+                VStack(alignment: .leading, spacing: stackSpacing) {
+                    Text(doctorInfo.doctor.name)
+                        .font(Font.poppinsBold)
                         .foregroundColor(.white)
-                    Text(doctor.specialisation)
-                        .font(Font.custom("Poppins", size: 14))
-                        .foregroundColor(Color(red: 0.8, green: 0.88, blue: 1))
-                }
+                    Text(doctorInfo.doctor.specialisation)
+                        .font(Font.poppinsCommon)
+                        .foregroundColor(Color.textCommon)
+                }.padding(.leading, personalInfoPadding)
                 
                 Spacer()
                 
-                Image("arrow-right").frame(width: 24, height: 24)
+                Image.arrowRight
             }
-            .padding(.bottom, 16)
+            .padding([.top, .leading, .trailing], commonPAdding)
             
-            Divider().overlay(Color.white.opacity(0.8))
+            Divider()
+                .overlay(Color.devider)
+                .padding([.trailing, .leading], commonPAdding)
+                .padding([.bottom, .top], deviderPadding)
             
-            HStack {
-                Image("calendar-2").padding(.trailing, 8)
-                Text("Sunday, 12 June")
-                    .font(Font.custom("Poppins", size: 12))
-                    .foregroundColor(.white)
-                    .padding(.trailing, 17)//30
-                
-                Image("clock").padding(.trailing, 8)
-                Text("11:00 - 12:00 AM")
-                    .font(Font.custom("Poppins", size: 12))
-                    .foregroundColor(.white)
+            HStack(spacing: 0) {
+                HStack(spacing: 0) {
+                    Image.calendar.padding(.trailing, imagePadding)
+                    Text(LocalizedStringKey(doctorInfo.date))
+                        .font(Font.poppinsSmall)
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack(spacing: 0) {
+                    Image.clock.padding(.trailing, imagePadding)
+                    Text(LocalizedStringKey(doctorInfo.time))
+                        .font(Font.poppinsSmall)
+                        .foregroundColor(.white)
+                        .padding(.trailing, 24.5)
+                }
             }
-            .padding(.top, 16)
+            .padding([.bottom, .leading, .trailing], commonPAdding)
         }
-        .padding(20)
-        .frame(width: 327, alignment: .top)
-        .background(Color(red: 0.28,  green: 0.58, blue: 1))
-        .cornerRadius(12)
+        .frame(maxWidth: .infinity, alignment: .top)
+        .background(Color.backgroundBlue)
+        .cornerRadius(mainCornerRadius)
     }
 }
 
 struct DoctorInfo_Previews: PreviewProvider {
-    @State static var doctor = DoctorModel.currentDoctor
+    @State static var doctor = DoctorInfoModel.currentDoctorInfo
     static var previews: some View {
-        DoctorInfo(doctor: $doctor)
+        DoctorInfo(doctorInfo: $doctor).padding(20)
     }
 }

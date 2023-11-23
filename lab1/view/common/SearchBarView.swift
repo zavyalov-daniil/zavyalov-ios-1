@@ -8,11 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct SearchBar: View {
+struct SearchBarView: View {
     var cornerRadius: CGFloat = 12
     var barPadding: CGFloat = 16
+    var stackSpacing: CGFloat = 12
     var body : some View {
-        HStack(alignment: .center, spacing: 12) {
+        HStack(alignment: .center, spacing: stackSpacing) {
             Image.searchNormal
             Text("searchDoctor")
                 .font(Font.poppinsMiddle)
@@ -25,10 +26,10 @@ struct SearchBar: View {
     }
 }
 
-struct SearchBar_Previews: PreviewProvider {
+struct SearchBarView_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            SearchBar()
+            SearchBarView()
         }.padding(20)
     }
 }

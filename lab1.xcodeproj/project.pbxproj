@@ -15,7 +15,8 @@
 		9C7A99A92B0F8C2D00AE136E /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A99A82B0F8C2D00AE136E /* DoctorModel.swift */; };
 		9C7A99AB2B0F8E3D00AE136E /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A99AA2B0F8E3D00AE136E /* SampleData.swift */; };
 		9C7A99B82B0FB14500AE136E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A99BA2B0FB14500AE136E /* Localizable.strings */; };
-		9C8994972B0660F20090EBD5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8994962B0660F20090EBD5 /* SearchBar.swift */; };
+		9C7A99BE2B0FC5B800AE136E /* DoctorInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A99BD2B0FC5B800AE136E /* DoctorInfoModel.swift */; };
+		9C8994972B0660F20090EBD5 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8994962B0660F20090EBD5 /* SearchBarView.swift */; };
 		9C8994992B067A170090EBD5 /* DoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8994982B067A170090EBD5 /* DoctorInfo.swift */; };
 		9C89949B2B067CE60090EBD5 /* DoctorPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +32,8 @@
 		9C7A99AA2B0F8E3D00AE136E /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		9C7A99B92B0FB14500AE136E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C7A99BC2B0FC1FD00AE136E /* Poppins.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Poppins.ttf; path = ../../../../../Downloads/Poppins/Poppins.ttf; sourceTree = "<group>"; };
-		9C8994962B0660F20090EBD5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		9C7A99BD2B0FC5B800AE136E /* DoctorInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoModel.swift; sourceTree = "<group>"; };
+		9C8994962B0660F20090EBD5 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		9C8994982B067A170090EBD5 /* DoctorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfo.swift; sourceTree = "<group>"; };
 		9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9C7A99A82B0F8C2D00AE136E /* DoctorModel.swift */,
+				9C7A99BD2B0FC5B800AE136E /* DoctorInfoModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -116,7 +119,7 @@
 		9C7A99AF2B0FA9C300AE136E /* common */ = {
 			isa = PBXGroup;
 			children = (
-				9C8994962B0660F20090EBD5 /* SearchBar.swift */,
+				9C8994962B0660F20090EBD5 /* SearchBarView.swift */,
 				9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */,
 			);
 			path = common;
@@ -206,7 +209,8 @@
 				9C8994992B067A170090EBD5 /* DoctorInfo.swift in Sources */,
 				9C7A99A72B0F894900AE136E /* Theme.swift in Sources */,
 				9C89949B2B067CE60090EBD5 /* DoctorPhotoView.swift in Sources */,
-				9C8994972B0660F20090EBD5 /* SearchBar.swift in Sources */,
+				9C8994972B0660F20090EBD5 /* SearchBarView.swift in Sources */,
+				9C7A99BE2B0FC5B800AE136E /* DoctorInfoModel.swift in Sources */,
 				9C7A99A92B0F8C2D00AE136E /* DoctorModel.swift in Sources */,
 				9C7A99AB2B0F8E3D00AE136E /* SampleData.swift in Sources */,
 			);
