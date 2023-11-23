@@ -11,8 +11,8 @@ import SwiftUI
 extension DoctorModel {
     static let currentDoctor = DoctorModel(
         image: .firstDoctor,
-        name: "Dr. Imran Syahir",
-        specialisation: "General Doctor"
+        name: "name",
+        specialisation: "specialisation"
     )
 }
 

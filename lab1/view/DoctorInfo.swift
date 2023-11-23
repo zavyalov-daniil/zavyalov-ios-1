@@ -23,10 +23,10 @@ struct DoctorInfo: View {
                 DoctorPhotoView(image: doctorInfo.doctor.image)
                 
                 VStack(alignment: .leading, spacing: stackSpacing) {
-                    Text(doctorInfo.doctor.name)
+                    Text(LocalizedStringKey(doctorInfo.doctor.name))
                         .font(Font.poppinsBold)
                         .foregroundColor(.white)
-                    Text(doctorInfo.doctor.specialisation)
+                    Text(LocalizedStringKey(doctorInfo.doctor.specialisation))
                         .font(Font.poppinsCommon)
                         .foregroundColor(Color.textCommon)
                 }.padding(.leading, personalInfoPadding)

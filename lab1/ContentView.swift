@@ -9,39 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     @State var currentDoctorInfo = DoctorInfoModel.currentDoctorInfo
+    var topHeadingPadding: CGFloat = 20
+    var bottomHeadingPadding: CGFloat = 20
+    var searchBarPadding: CGFloat = 20
+    var commonPadding: CGFloat = 24
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack {
-                VStack(alignment: .leading) {
-                    Text("Hello,")
-                        .font(Font.custom("Poppins", size: 16))
-                        .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(LocalizedStringKey("hello"))
+                        .font(Font.poppins)
+                        .foregroundColor(Color.textGray)
                     
-                    Text("Hi James")
-                        .font(
-                            Font.custom("Poppins", size: 20)
-                                .weight(.bold)
-                        )
-                        .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
+                    Text(LocalizedStringKey("hiJames"))
+                        .font(Font.poppinsBoldHeading)
+                        .foregroundColor(Color.textHeading)
                 }
                 Spacer()
-                Image("Frame").clipShape(Circle())
+                Image.frame.clipShape(Circle())
                 
             }
-            .padding([.leading, .trailing], 24)
-            .padding(.bottom, 32)
-            .padding(.top, 20)
+            .padding(.bottom, topHeadingPadding)
+            .padding(.top, bottomHeadingPadding)
             
             DoctorInfo(doctorInfo: $currentDoctorInfo)
-                .padding([.leading, .trailing], 24)
             
             SearchBarView()
-                .padding([.trailing, .leading], 16)
-                .padding(.top, 20)
+                .padding(.top, searchBarPadding)
             Spacer()
             
-        }.padding([.trailing, .leading], 24)
+        }.padding([.trailing, .leading], commonPadding)
         
     }
 }
