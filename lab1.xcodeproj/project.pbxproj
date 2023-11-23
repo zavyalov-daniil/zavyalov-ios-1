@@ -14,6 +14,7 @@
 		9C7A99A72B0F894900AE136E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A99A62B0F894900AE136E /* Theme.swift */; };
 		9C7A99A92B0F8C2D00AE136E /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A99A82B0F8C2D00AE136E /* DoctorModel.swift */; };
 		9C7A99AB2B0F8E3D00AE136E /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A99AA2B0F8E3D00AE136E /* SampleData.swift */; };
+		9C7A99B82B0FB14500AE136E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A99BA2B0FB14500AE136E /* Localizable.strings */; };
 		9C8994972B0660F20090EBD5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8994962B0660F20090EBD5 /* SearchBar.swift */; };
 		9C8994992B067A170090EBD5 /* DoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8994982B067A170090EBD5 /* DoctorInfo.swift */; };
 		9C89949B2B067CE60090EBD5 /* DoctorPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */; };
@@ -28,6 +29,8 @@
 		9C7A99A62B0F894900AE136E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9C7A99A82B0F8C2D00AE136E /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		9C7A99AA2B0F8E3D00AE136E /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		9C7A99B92B0FB14500AE136E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C7A99BC2B0FC1FD00AE136E /* Poppins.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Poppins.ttf; path = ../../../../../Downloads/Poppins/Poppins.ttf; sourceTree = "<group>"; };
 		9C8994962B0660F20090EBD5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		9C8994982B067A170090EBD5 /* DoctorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfo.swift; sourceTree = "<group>"; };
 		9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorPhotoView.swift; sourceTree = "<group>"; };
@@ -63,16 +66,16 @@
 		9C4657432B0629C600682310 /* lab1 */ = {
 			isa = PBXGroup;
 			children = (
-				9C4657442B0629C600682310 /* lab1App.swift */,
-				9C8994962B0660F20090EBD5 /* SearchBar.swift */,
+				9C7A99BB2B0FC18600AE136E /* Fonts */,
 				9C4657462B0629C600682310 /* ContentView.swift */,
-				9C8994982B067A170090EBD5 /* DoctorInfo.swift */,
+				9C7A99AE2B0FA99600AE136E /* theme */,
+				9C7A99AD2B0FA91600AE136E /* view */,
+				9C7A99AC2B0FA90100AE136E /* model */,
+				9C4657442B0629C600682310 /* lab1App.swift */,
+				9C7A99AA2B0F8E3D00AE136E /* SampleData.swift */,
 				9C4657482B0629C900682310 /* Assets.xcassets */,
 				9C46574A2B0629C900682310 /* Preview Content */,
-				9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */,
-				9C7A99A62B0F894900AE136E /* Theme.swift */,
-				9C7A99A82B0F8C2D00AE136E /* DoctorModel.swift */,
-				9C7A99AA2B0F8E3D00AE136E /* SampleData.swift */,
+				9C7A99BA2B0FB14500AE136E /* Localizable.strings */,
 			);
 			path = lab1;
 			sourceTree = "<group>";
@@ -83,6 +86,48 @@
 				9C46574B2B0629C900682310 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C7A99AC2B0FA90100AE136E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A99A82B0F8C2D00AE136E /* DoctorModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9C7A99AD2B0FA91600AE136E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A99AF2B0FA9C300AE136E /* common */,
+				9C8994982B067A170090EBD5 /* DoctorInfo.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9C7A99AE2B0FA99600AE136E /* theme */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A99A62B0F894900AE136E /* Theme.swift */,
+			);
+			path = theme;
+			sourceTree = "<group>";
+		};
+		9C7A99AF2B0FA9C300AE136E /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9C8994962B0660F20090EBD5 /* SearchBar.swift */,
+				9C89949A2B067CE60090EBD5 /* DoctorPhotoView.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		9C7A99BB2B0FC18600AE136E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A99BC2B0FC1FD00AE136E /* Poppins.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C46574C2B0629C900682310 /* Preview Assets.xcassets in Resources */,
+				9C7A99B82B0FB14500AE136E /* Localizable.strings in Resources */,
 				9C4657492B0629C900682310 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +213,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C7A99BA2B0FB14500AE136E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C7A99B92B0FB14500AE136E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9C46574D2B0629C900682310 /* Debug */ = {
