@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var currentDoctor = DoctorModel.currentDoctor
+    
     var body: some View {
         VStack {
             HStack {
@@ -31,7 +33,7 @@ struct ContentView: View {
             .padding(.bottom, 32)
             .padding(.top, 20)
             
-            DoctorInfo(imageName: "Doc", doctorName: "Dr. Imran Syahir", doctorSpecialisation: "General Doctor")
+            DoctorInfo(doctor: $currentDoctor)
                 .padding([.leading, .trailing], 24)
             
             SearchBar()

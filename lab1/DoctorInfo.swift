@@ -9,19 +9,17 @@ import Foundation
 import SwiftUI
 
 struct DoctorInfo: View {
-    var imageName: String
-    var doctorName: String
-    var doctorSpecialisation: String
+    @Binding var doctor: DoctorModel
     var body : some View {
         VStack() {
             HStack {
-                DoctorPhoto(imageName: 	imageName)
+                DoctorPhotoView(image: doctor.image)
                 
                 VStack(alignment: .leading, spacing: 16) {
-                    Text(doctorName)
+                    Text(doctor.name)
                         .font(Font.custom("Poppins", size: 16).weight(.bold))
                         .foregroundColor(.white)
-                    Text(doctorSpecialisation	)
+                    Text(doctor.specialisation)
                         .font(Font.custom("Poppins", size: 14))
                         .foregroundColor(Color(red: 0.8, green: 0.88, blue: 1))
                 }
@@ -56,7 +54,8 @@ struct DoctorInfo: View {
 }
 
 struct DoctorInfo_Previews: PreviewProvider {
+    @State static var doctor = DoctorModel.currentDoctor
     static var previews: some View {
-        DoctorInfo(imageName: "Doc", doctorName: "Dr. Imran Syahir", doctorSpecialisation: "General Doctor")
+        DoctorInfo(doctor: $doctor)
     }
 }

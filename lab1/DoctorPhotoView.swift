@@ -8,15 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct DoctorPhoto: View {
-    var imageName: String
+struct DoctorPhotoView: View {
+    var image: Image
+    var frameSize: CGFloat = 58
     
     var body : some View {
-        
-        Image(imageName)
+        image
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 58, height: 72)
+            .frame(width: frameSize, height: frameSize)
             .clipped()
             .mask(Circle())
             .background(Circle().fill(Color.white))
@@ -25,6 +25,6 @@ struct DoctorPhoto: View {
 
 struct DoctorPhoto_Previews: PreviewProvider {
     static var previews: some View {
-        DoctorPhoto(imageName: "Doc")
+        DoctorPhotoView(image: .firstDoctor)
     }
 }
